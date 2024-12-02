@@ -1,0 +1,157 @@
+[
+    
+    {
+        "id":"action",
+        "type":"act",
+        "level":1,
+        "name":"_PARAM1_.",
+        "paramtype":[
+            "choose"
+        ],
+        "chooseoption":[
+            "Attack","Use Skill", "Deffend", "Jump", "Move left", "Move right"
+        ],
+        "inputpath":1,
+        "outputpath":0  
+    },
+    {
+        "id":"true",
+        "type":"logic",
+        "level":1,
+        "name":"Outputs TRUE.",
+        "paramtype":[],
+        "chooseoption":[],
+        "inputpath":0,
+        "outputpath":1  
+    },
+    {
+        "id":"false",
+        "type":"logic",
+        "level":1,
+        "name":"Outputs FALSE.",
+        "paramtype":[],
+        "chooseoption":[],
+        "   ":0,
+        "outputpath":1  
+    },
+    {
+        "id":"not",
+        "type":"logic",
+        "level":1,
+        "name":"NOT gate",
+        "paramtype":[],
+        "chooseoption":[],
+        "inputpath":1,
+        "outputpath":1  
+    },
+    {
+        "id":"or",
+        "type":"logic",
+        "level":1,
+        "name":"OR gate",
+        "paramtype":[],
+        "chooseoption":[],
+        "inputpath":2,
+        "outputpath":1  
+    },
+    {
+        "id":"and",
+        "type":"logic",
+        "level":1,
+        "name":"AND gate",
+        "paramtype":[],
+        "chooseoption":[],
+        "inputpath":2,
+        "outputpath":1  
+    },
+    {
+        "id":"split",
+        "type":"logic",
+        "level":1,
+        "name":"Splits the input.",
+        "paramtype":[],
+        "chooseoption":[],
+        "inputpath":1,
+        "outputpath":2  
+    },
+    {
+        "id":"var_assignment",
+        "type":"var",
+        "level":4,
+        "name":"Assign _PARAM2_ to variable _PARAM1_.",
+        "paramtype":["str", "num"],
+        "chooseoption":[],
+        "inputpath":1,
+        "outputpath":0 
+    },
+    {
+        "id":"var_choose",
+        "type":"var",
+        "level":4,
+        "name":"Assign _PARAM1_ to variable _PARAM2_.",
+        "paramtype":["choose", "str"],
+        "chooseoption":["my HP", "enemy's HP", "my X coordinate", "enemy's X coordinate"],
+        "inputpath":1,
+        "outputpath":0  
+    },
+    {
+        "id":"var_modify",
+        "type":"var",
+        "level":4,
+        "name":"_PARAM1_ _PARAM3_ _PARAM2_",
+        "paramtype":["str", "num","choose"],
+        "chooseoption":["+=","-=","/=","*="],
+        "inputpath":1,
+        "outputpath":0  
+    },
+    {
+        "id":"var_compare",
+        "type":"var",
+        "level":4,
+        "name":"If _PARAM1_ _PARAM2_ _PARAM3_, outputs TRUE.",
+        "paramtype":["str","choose", "num"],
+        "chooseoption":["==","!=","<",">"],
+        "inputpath":0,
+        "outputpath":1  
+    },
+    {
+        "id":"enemy_is",
+        "type":"if",
+        "level":3,
+        "name":"If enemy is _PARAM1_, Outputs TRUE.",
+        "paramtype":["choose"],
+        "chooseoption":["on the left","on the right","above","below"],
+        "inputpath":0,
+        "outputpath":1  
+    },
+    {
+        "id":"wall_is",
+        "type":"if",
+        "level":3,
+        "name":"If wall is _PARAM1_, Outputs TRUE.",
+        "paramtype":["choose"],
+        "chooseoption":["on the left","on the right","above","below"],
+        "inputpath":0,
+        "outputpath":1  
+    },
+    {
+        "id":"doing",
+        "type":"if",
+        "level":3,
+        "name":"While _PARAM1_, Outputs TRUE.",
+        "paramtype":["choose"],
+        "chooseoption":["walking", "jumping", "attacking", "using skill 1", "using skill 2", "deffending", "being knock-backed"],
+        "inputpath":0,
+        "outputpath":1  
+    },
+    {
+        "id":"doing_enemy",
+        "type":"if",
+        "level":3,
+        "name":"While enemy is _PARAM1_, Outputs TRUE.",
+        "paramtype":["choose"],
+        "chooseoption":["walking", "jumping", "attacking", "using skill 1", "using skill 2", "deffending", "being knock-backed"],
+        "inputpath":0,
+        "outputpath":1  
+    }
+]
